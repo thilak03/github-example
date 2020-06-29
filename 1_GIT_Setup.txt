@@ -1,0 +1,39 @@
+ssh-keygen -t rsa -b 4096 -C rk.thilak@gmail.com
+
+Key will be stored in /c/Users/trethine/.ssh/id_rsa)
+
+cd ~/.ssh
+ls -ltr
+
+Add key to the agent:
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+Add key to the github account:
+
+To copy public key to clipboard buffer
+cat ~/.ssh/id_rsa.pub | clip
+
+Login to github account:
+paste the ssh 
+create repository
+clone repository
+
+In git bash:
+
+mkdir ~/Desktop/Data_Science_Learning/Python/Capstone/projects
+cd ~/Desktop/Data_Science_Learning/Python/Capstone/projects
+git clone <repository_URL>
+(git clone git@github.com:thilak03/Coursera_Capstone.git)
+
+ls -ltr
+
+cd ~/Desktop/Data_Science_Learning/Python/Capstone/projects/Coursera_Capstone
+
+print("Hello Github!")
+vim python_code.py
+
+git status
+git add Capstone_Project_Notebook.ipynb
+git commit -m "adding git add Capstone_Project_Notebook.ipynb"
+git push origin master
